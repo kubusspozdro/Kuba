@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interaktywna Strona</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #messages { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Powiadomienia</h1>
+    <button onclick="sendMessage('Hej, potrzebuję cię')">Hej, potrzebuję cię</button>
+    <button onclick="sendMessage('Gotowe')">Gotowe</button>
+    
+    <div id="messages"></div>
+
+    <script>
+        function sendMessage(message) {
+            const messagesDiv = document.getElementById('messages');
+            const newMessage = document.createElement('p');
+            newMessage.textContent = message;
+            messagesDiv.appendChild(newMessage);
+        }
+    </script>
+</body>
+</html>
